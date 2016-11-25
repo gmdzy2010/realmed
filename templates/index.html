@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+{% load i18n pages_tags mezzanine_tags i18n staticfiles %}
+
+{% block meta_title %}{% trans "Home" %}{% endblock %}
+{% block title %}{% trans "Home" %}{% endblock %}
+
+{% block breadcrumb_menu %}
+<li class="active">{% trans "Home" %}</li>
+{% endblock %}
+
+{% block main %}
+<!--wrap-->
+<div class="wrap">
+	<!--slider-->
+	<div id="wrapper">
+		<div id="slider-wrapper">
+			<div id="slider" class="nivoSlider">
+<!--                <img src="images/czy01.jpg" alt="" />-->
+                <img src="{% static "img/slide01.jpg" %}" alt="" />
+                <!--<img src="{% static "img/cy02.jpg" alt="" />-->
+            </div>
+		</div>
+	</div>
+	<!--slider end-->
+
+	<!--menu-->
+	<div class="product_menu clearfix">
+		<div class="ryyx">
+			<div class="ryyx_hover">
+                <p class="showbtn"><a href="#Modal_qyjs" role="button"  data-toggle="modal">查看企业介绍</a></p>
+			</div>
+		</div>
+        <div class="cys">
+            <a href="http://www.colowell.cn" target="_blank">
+                <div class="cys_hover"></div>
+            </a>
+        </div>
+		<div class="cyk">
+			<div class="cyk_hover">
+				<h3>关注锐翌医学微信公众号</h3>
+				<p><img src="{% static "img/realmed_wx.jpg" %}" width="121" height="121" alt="图片"></p>
+			</div>
+		</div>
+	</div>
+
+    <div class="product_menu clearfix">
+        <div class="cy">
+            <a href="https://shop144836687.taobao.com/" target="_blank">
+                <div class="cy_hover"></div>
+            </a>
+        </div>
+        <div class="czy">
+            <div class="czy_hover">
+                <p class="showbtn"><a href="#Modal_czy" role="button"  data-toggle="modal">查看产品介绍</a></p>
+            </div>
+        </div>
+        <div class="czx">
+            <div class="czx_hover">
+                <h3>关注锐翌医学微信公众号</h3>
+                <p><img src="{% static "img/realmed_wx.jpg" %}" width="121" height="121" alt="图片"></p>
+            </div>
+        </div>
+
+    </div>
+	<!--menu end-->
+
+    <div class="footer">
+        <p style="border:0px;padding-right:0px;">© 2016 沪ICP备16022951号-4<br />上海锐翌生物科技</p>
+    </div>
+</div>
+
+
+<div id="Modal_qyjs" class="modal" data-easein="fadeInDownBig" data-easeout="fadeOutDownBig" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">企业介绍</h4>
+            </div>
+            <div class="modal-body">
+                <div class="content">
+                    <p>锐翌生物科技集团，总部注册于上海浦东新区，目前已在深圳、济南、杭州等地成立分部，是国家批准成立的专业基因科技及健康服务公司，自成立以来，始终秉承着“锐意进取”的企业理念，致力于为客户提供最优质的服务。锐翌生物科技集团以清华大学、浙江大学、北京大学、南开大学以及美国UCLA等国内外高等院校及医院的专家教授为技术依托，吸纳了众多基因组学、医学、生物信息学等领域精英的加盟，合作伙伴覆盖全国30多个省市，团队成员在Nature、Science 、Nature Genetics 、Genome Biology、Nature Communications、PNAS等国际期刊已发表多篇文章，目前集团已获得12项软件著作权，近30项专利。</p>
+                    <p>集团旗下的锐翌医学为广大客户提供相关医学服务，依托于二代测序技术平台，关注技术和研究成果在医学上的转化应用，特别是在人体微生态、癌症诊断与科学用药、优生优育等精准医疗领域的应用。锐翌医学利用美国国立卫生院（NIH）数据库中已有研究成果，结合亚裔人种遗传特征，开发无创早期的筛查和诊断产品，使精准医疗的概念真正走进临床应用，造福人类健康！</p>
+                </div>
+                <div class="image">
+                    <div class="row1">
+                        <img src="{% static "img/image001.png" %}" width="271px" height="193px" alt=""/>
+                        <img src="{% static "img/image002.png" %}" width="271px" height="193px" alt=""/>
+                    </div>
+                    <div class="row2">
+                        <img src="{% static "img/image003.png" %}" width="271px" height="193px" alt=""/>
+                        <img src="{% static "img/image004.png" %}" width="271px" height="193px" alt=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">关闭窗口</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="Modal_czy" class="modal" data-easein="fadeInDownBig" data-easeout="fadeOutDownBig" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">常知因™全基因组检测简介</h4>
+            </div>
+            <div class="modal-body">
+                <div class="content">
+                    <p>常知因TM是锐翌医学针对高端人群开发出的个人全基因组检测服务，采用国际先进的高通量基因测序平台和自主研发的数据库与分析系统，通过对疾病相关的基因位点分析来预测和评估疾病风险，并提供全面、详细、专业的检测报告和健康管理建议。现代医学认为疾病是由于先天的遗传体质和后天的外来因素共同作用的结果。除外伤外，几乎所有的疾病发生都与基因有关。通过对个人全基因组检测，可以让您全面、详细地了解自己的遗传特质，了解自己内在风险，做到有目的、有针对性地改善生活方式和饮食习惯，降低疾病发生的可能，让您更好地享受健康生活。</p>
+                    <div class="image">
+                        <img src="{% static "img/conten_czy001.jpg" %}" width="500px" height="349px" alt=""/>
+                    </div>
+                    <p>常知因通过对人体全基因组检测，对包括多种肿瘤、心脑血管疾病、免疫代谢类疾病等在内的，与人类健康密切相关的24种极高风险综合症、30种常见疾病和402种致病基因等进行全面遗传分析。</p>
+                    <div class="image">
+                        <img src="{% static "img/conten_czy002.jpg" %}" width="563px" height="473px" alt=""/>
+                    </div>
+                    <h5>检测的意义</h5>
+                    <p>1、通过常知因™全基因组检测让你全面、详细地了解自己的遗传体质，做到 有目的、有针对性地预防，改善生活方式和饮食习惯，降低疾病发生的可能。</p>
+                    <p>2、个性化指导用药</p>
+                    <p>人体对药物的反应存在差异，主要体现在药效、代谢能力和毒副作用等方面。详细了解遗传体质，能让用药更加科学、疗效更确切、毒副作用更低，帮助人们降低不必要的医疗支出。</p>
+                    <p>国内外已有资料表明，链霉素、卡那霉素、庆大霉素有可能损害儿童的听觉神经，引起耳聋；多黏菌素、去甲肾上腺素能引起儿童的肾脏损伤；胃复安能引起一些儿童的脑损伤；四环素、氟哌酸等药物能影响幼儿牙齿、骨骼发育；感冒通能引起儿童血尿；滴鼻净能引起儿童中毒等，孕妇、哺乳期妇女服用某些药物还可能影响胎儿、乳儿的健康。</p>
+                    <p>《千手观音》的表演者中国残疾人艺术团里21位演员，其中有18位为药物致聋。绝大部分又都是在两岁前后因为发烧时使用抗生素导致耳聋。</p>
+                    <p>另外肺癌患者在治疗时必须要进行EGFR基因检测，临床结果表明吉非替尼和厄罗替尼等靶向药物（EGFR酪氨酸激酶抑制剂，EGFR-TKIs）仅对部分患者有效，大部分对EGFR-TKIs治疗有效的患者最终都会对EGFR-TKIs产生耐药性。美国国家综合癌症网络(NCCN)2010年版的临床实践指南中明确指出：EGFR突变，尤其是外显子19缺失突变与肿瘤对EGFR-TKIs如吉非替尼的敏感性有重要关系。因此检测EGFR突变可以帮助患者选择最好的最合适的治疗方法。</p>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">关闭窗口</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--wrap end-->
+
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+</script>
+{% endblock %}
